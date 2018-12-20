@@ -5,6 +5,6 @@ public class StringCalculator {
         if (numbersAsText.isEmpty()) {
             return 0;
         }
-        return 1;
+        return Integer.valueOf(numbersAsText);
     }
 }
