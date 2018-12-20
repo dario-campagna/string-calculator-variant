@@ -30,4 +30,9 @@ public class AddNumbersTest {
     public void anotherNumber() {
         assertThat(calculator.add("2"), is(equalTo(2)));
     }
+
+    @Test
+    public void twoNumbersSeparatedByComma() {
+        assertThat(calculator.add("3,3"), is(equalTo(6)));
+    }
 }
