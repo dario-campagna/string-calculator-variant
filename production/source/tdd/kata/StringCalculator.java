@@ -2,6 +2,9 @@ package tdd.kata;
 
 public class StringCalculator {
     public int add(String numbersAsText) {
-        return 0;
+        if (numbersAsText.isEmpty()) {
+            return 0;
+        }
+        return 1;
     }
 }
