@@ -35,4 +35,9 @@ public class AddNumbersTest {
     public void twoNumbersSeparatedByComma() {
         assertThat(calculator.add("3,3"), is(equalTo(6)));
     }
+
+    @Test
+    public void unknownAmountOfNumbersSeparatedByComma() {
+        assertThat(calculator.add("5,15,5,5"), is(equalTo(30)));
+    }
 }

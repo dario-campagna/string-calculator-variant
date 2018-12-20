@@ -1,12 +1,14 @@
 package tdd.kata;
 
+import java.util.Arrays;
+
 public class StringCalculator {
     public int add(String numbersAsText) {
         if (numbersAsText.isEmpty()) {
             return 0;
         } else if (numbersAsText.contains(",")) {
             String[] numbers = numbersAsText.split(",");
-            return Integer.valueOf(numbers[0]) + Integer.valueOf(numbers[1]);
+            return Arrays.stream(numbers).mapToInt(Integer::valueOf).sum();
         }
         return Integer.valueOf(numbersAsText);
     }
