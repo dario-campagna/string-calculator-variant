@@ -12,6 +12,6 @@ public class StringCalculator {
         if (numbersAsText.isEmpty()) {
             return Stream.empty();
         }
-        return Arrays.stream(numbersAsText.split(","));
+        return Arrays.stream(numbersAsText.split(",|\n"));
     }
 }
